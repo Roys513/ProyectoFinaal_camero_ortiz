@@ -1,0 +1,88 @@
+@use './presets';
+
+.checkout{
+    background-color: presets.$color5;
+    padding-top: clamp(1rem, 11vw, 4.3rem);
+    height: 150vh;
+    
+    h2{
+        background-color: presets.$color6;
+        display:flex;
+        justify-content: center;
+        @include presets.fuente_bebas_neue(500);
+        color: presets.$color4;
+    }
+    .item{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 clamp(0.5rem, 5vw, 7rem);
+        padding: clamp(1rem, 5vw, 2rem) 0;
+        border-bottom: 1px solid presets.$color7;
+        @include presets.fuente_bebas_neue(500);
+        .producto-cantidad{
+            margin-left: clamp(0.3rem,1vw,1rem);
+            @include presets.fuente_bebas_neue(500);
+            color: presets.$color6;
+            font-size: clamp(1rem, 4vw, 1.5rem);
+        }
+        .producto-precio{
+            margin-right: clamp(0.3rem,1vw,1rem);
+            @include presets.fuente_bebas_neue(500);
+            color: presets.$color7;
+            font-size: clamp(1rem, 5vw, 1.5rem);
+        }
+    }
+
+    .formulario-container{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding-top: clamp(1rem, 5vw, 3rem);
+        .formulario{
+            background-color: presets.$color6;
+            @include presets.fuente_bebas_neue(500);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(0.5rem, 1vw, 2rem);
+            padding: clamp(1rem, 5vw, 3rem) clamp(1rem, 15vw, 5rem);
+            width: clamp(14rem, 40vw, 25rem);
+            height: clamp(17rem, 30vw, 25rem);
+            border: 1px solid black;
+            border-radius: 3px;
+            color:presets.$color4;
+            div{
+                display: flex;
+                flex-direction: column;
+                input{
+                    background-color: presets.$color3;
+                    height: clamp(1.3rem,2.5vw,2rem);
+                    width: clamp(10rem,25vw,20rem);
+                    padding-left: 5px;
+                    border: none;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+    .respuesta-compra{
+        margin-top: 20px;
+        text-align: center;
+        color:presets.$color1;
+    }
+
+    .error{
+        text-align: center;
+    }
+
+    .container-boton-submit{
+        display: flex;
+        justify-content: center;
+        button{
+            @include presets.boton;
+            padding: clamp(0.5rem, 1vw, 3rem);    
+        }
+    }    
+}

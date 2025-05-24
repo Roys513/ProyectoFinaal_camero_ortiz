@@ -1,0 +1,53 @@
+@use './presets';
+@use './cartwidget';
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: presets.$color2;
+    display:flex;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .navbar_h1{
+        @include presets.fuente_shrikahnd;
+        color:presets.$color5;
+        align-content: center;
+        margin-left: 1rem;
+        font-size: clamp(1rem, 8vw, 3rem);
+        text-decoration: none;
+    }
+    
+    .nav_cart{
+        display: flex;
+        margin-right: 5px;
+        
+        .navbar_nav{
+            align-content: center; 
+            
+            .navbar_ul{
+                align-self: center;
+                display: flex;
+                gap: 0.5rem;
+                padding: 0;
+                list-style: none;
+                
+                li{
+                    display: inline-block;
+                    @include presets.fuente_bebas_neue(100);
+                    font-size: clamp(1rem, 3vw, 4rem);
+                    color:presets.$color5;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

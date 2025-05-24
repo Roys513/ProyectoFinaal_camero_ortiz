@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+//Paleta de colores
+/*Negro intenso*/$color1:#1A1A1A;
+/*Rojo vibrante*/$color2:#D90429;
+/*Blanco puro*/$color3:#FFFFFF;
+/*Gris oscuro*/$color4:#8D99AE;
+/*Gris claro*/$color5:#F7F1E8;
+/*Dark side*/$color6:#263238;
+/*Orange*/$color7:#e67e22;
+
+//Font Dancing Script
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Shrikhand&display=swap');
+
+@mixin fuente_shrikahnd{
+    font-family: "Shrikhand", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+//Font Bebas Neue
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Dancing+Script:wght@400..700&display=swap');
+
+@mixin fuente_bebas_neue($weight){
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: $weight;
+    font-style: normal;
+}
+
+//Boton
+@mixin boton{
+        background-color: $color2;
+        color: $color5;
+        margin-top: 10px;
+        padding: clamp(0.5rem, 8%, 1.5rem);
+        border: none;
+        border-radius: 5px;
+        @include fuente_bebas_neue(500);
+        cursor: pointer;
+
+        transition: all 0.20s ease;
+        
+        &:hover{
+            background-color: $color7;
+            color: $color1;
+        }
+        
+        &:active {
+            transform: scale(0.58);
+        }
+}

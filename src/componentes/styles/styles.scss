@@ -1,0 +1,12 @@
+//Presets
+@use './componentes/presets';
+//Barra de navegación
+@use './componentes/navbar';
+@use './componentes/item_list_container';
+//Detalle del producto
+@use './componentes/item_detail';
+//Carrito de compra
+@use './componentes/cart';
+@use './componentes/cartItem';
+//Checkout
+@use './componentes/checkout';

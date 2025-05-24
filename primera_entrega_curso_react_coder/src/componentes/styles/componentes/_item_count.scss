@@ -1,0 +1,40 @@
+@use './presets';
+
+.item_count.item_count {
+    margin-top: auto;
+    width: 100%;
+    justify-items: center;
+
+    .contador{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .boton_incrementar,     .boton_disminuir{
+            @include presets.boton;
+            background-color: presets.$color6;
+            font-size: clamp(12px, 5vw, 18px);
+            padding: 5px 12px;
+        }
+
+        .numero_contador{
+            @include presets.fuente_bebas_neue(500);
+            color: presets.$color7;
+        }
+    }
+
+    .texto_stock_disponible{
+        @include presets.fuente_bebas_neue(500);
+        text-align: center;
+        font-size: clamp(10px, 5vw, 14px);
+        color: presets.$color4;
+    }
+
+    .boton_carrito{
+        @include presets.boton;
+        width: clamp(8rem, 10vw, 9rem);
+        font-size: clamp(12px, 3vw,  16px);
+        align-content: center;
+    }
+}

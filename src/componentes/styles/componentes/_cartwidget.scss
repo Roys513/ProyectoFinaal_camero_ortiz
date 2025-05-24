@@ -1,0 +1,19 @@
+.carrito{
+    display: flex;
+    height: clamp(2rem, 6vw, 3rem);
+    .icon{
+        align-self: center;
+        height: 2rem;
+        cursor: pointer;
+        color: white;
+    }
+    .contador{
+        align-self: flex-start;
+        z-index: 1000;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        padding: 0.2rem 0.4rem;
+        font-size: 0.75rem;
+    }
+}

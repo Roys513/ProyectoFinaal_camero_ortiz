@@ -1,0 +1,40 @@
+@use './presets';
+
+.cart-item{
+    border: 3px solid presets.$color6;
+    border-radius: 3px;
+    height: clamp(7rem, 10vw, 8rem);
+    width: clamp(6rem, 80vw, 60rem);
+    margin: clamp(1rem, 5vw, 2rem) clamp(2rem, 5vw, 5rem);
+    display: flex;
+    .imagen-producto{
+        padding-left: 10px;
+        height: auto;
+        width: clamp(6rem, 10vw, 6rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: clamp(5rem, 10vw, 6rem);
+        }
+    }
+    .contenido{
+        padding: clamp(0.2rem, 2vw, 0.5rem) clamp(1rem, 4vw, 2rem);
+        width: clamp(6rem, 80vw, 60rem);
+        h4{
+            @include presets.fuente_shrikahnd;
+            font-size: clamp(0.7rem, 2vw, 1rem)
+        }
+        p{
+            @include presets.fuente_bebas_neue(500);
+            font-size: clamp(0.5rem, 3vw, 1rem);
+            color: presets.$color6;
+        }
+        button{
+            @include presets.boton;
+            padding: 5px;
+            margin: 0;
+            font-size: clamp(0.5rem, 3vw, 1rem)
+        }
+    }
+}

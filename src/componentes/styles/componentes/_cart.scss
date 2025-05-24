@@ -1,0 +1,49 @@
+@use './presets';
+
+.cart{
+    background-color: presets.$color5;
+    padding-top: clamp(4rem, 13vw, 6rem);
+    height: 100vh;
+    .total-productos{
+        display: flex;
+        justify-content: start;
+        align-items: end;
+        flex-direction: column;
+        height: clamp(7rem, 10vw, 7rem);
+        margin: clamp(1rem, 5vw, 2rem) clamp(2rem, 5vw, 5rem);
+        .total{
+            color:presets.$color6;
+            @include presets.fuente_bebas_neue(500);
+            font-size: clamp(1.5rem, 5vw, 2rem);
+        }
+        .cantidad-total{
+            color: presets.$color7;
+            @include presets.fuente_bebas_neue(500);
+            font-size: clamp(0.2rem, 4vw, 1rem);
+        }
+
+        .botones-final-carrito{
+            width: clamp(17rem, 13vw, 14rem);
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+
+            .vaciar-carrito{
+                @include presets.boton;
+                padding: clamp(0.5rem, 1vw, 0.6rem);
+                width: clamp(8rem, 20vw, 15rem);            
+            }
+            .terminar-compra{
+                @include presets.boton;
+                background-color: green;
+                padding: clamp(0.5rem, 1vw, 0.6rem);            
+                width: clamp(8rem, 20vw, 15rem);            
+                .link-checkout{
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+        }
+    }
+}
+

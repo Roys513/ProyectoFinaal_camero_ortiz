@@ -1,0 +1,59 @@
+@use './presets';
+
+.card{
+    background-color: presets.$color6;
+
+    height: clamp(20rem, 20vw, 30rem);
+    width: clamp(12rem, 15vw, 20rem);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    img{
+        height: clamp(9rem, 10vw, 14rem);
+    }
+
+    h3{
+        margin-top: clamp(0.5vw, 1rem, 5vw);
+        font-size: clamp(20px, 40%, 25px);
+        text-align: center;
+        @include presets.fuente_shrikahnd;
+        color: presets.$color5;
+    }
+
+    h4, p{
+        @include presets.fuente_bebas_neue(500);
+        text-align: center;
+        padding: 0rem 1.5rem;
+        color: presets.$color4;
+    }
+
+    p{
+        font-size: clamp(20px, 1vw, 30px);
+        color: presets.$color3;
+    }
+
+    button{
+        background-color: presets.$color2;
+        color: presets.$color5;
+        margin-top: 10px;
+        padding: clamp(0.5rem, 8%, 1.5rem);
+        border: none;
+        border-radius: 5px;
+        @include presets.fuente_bebas_neue(500);
+        cursor: pointer;
+
+        transition: all 0.20s ease;
+        
+        &:hover{
+            background-color: presets.$color7;
+            color: presets.$color1;
+        }
+        
+        &:active {
+            transform: scale(0.58);
+        }
+    }
+}
