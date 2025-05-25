@@ -1,5 +1,30 @@
 @use './presets';
 
+.carrito-vacio{
+    background-color: presets.$color5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    h2{
+        @include presets.fuente_bebas_neue(500);
+        text-align: center;
+        align-self: center;
+        justify-self: center;
+        color: presets.$color6;
+    }
+    .link-seguir-comprando{
+        @include presets.boton;
+        align-self: center;
+    }
+
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
 .cart{
     background-color: presets.$color5;
     padding-top: clamp(4rem, 13vw, 6rem);

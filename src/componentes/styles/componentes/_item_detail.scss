@@ -52,6 +52,16 @@
                 font-size: clamp(10px, 4vw, 20px);
                 margin-top: -20px;
             }
+
+            .opciones-item-detail{
+                @include presets.boton;
+                padding: clamp(0.5rem, 1vw, 0.6rem);            
+                width: clamp(8rem, 20vw, 15rem);
+                a{
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
         }
     }
 }

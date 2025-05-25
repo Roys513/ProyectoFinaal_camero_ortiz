@@ -37,11 +37,11 @@
    cd entrega_final_react_camero_ortiz
 
 2. **Instalar dependencias**:
-
+   ```bash
    npm install
 
 3. **Iniciar el servidor de desarrollo**:
-
+    ```bash
     npm run dev
 
 La aplicación estará disponible en http://localhost:5173.

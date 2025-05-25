@@ -3,6 +3,9 @@ import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
 import { useContext } from 'react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { toast } from 'react-toastify'
 
 
 const ItemDetail = ({id, nombreArtista, album, precio, img, stock}) => {
@@ -15,6 +18,7 @@ const ItemDetail = ({id, nombreArtista, album, precio, img, stock}) => {
       
       const item = {id,nombreArtista,precio,album,img};
       agregarAlCarrito(item,cantidad)
+      toast.success("Añadido al carrito", {position: "top-right", autoClose: 1500, theme: "dark"})
     }
 
   return (
@@ -31,7 +35,7 @@ const ItemDetail = ({id, nombreArtista, album, precio, img, stock}) => {
             <h4>{precio}€</h4>
             
             {
-              agregarCantidad > 0 ?(<Link to='/cart'>Ir al carrito</Link>) : (<ItemCount inicial={1} stock= {stock}  funcionAgregar= {manejadorCantidad}/>)
+              agregarCantidad > 0 ?(<> <button className='opciones-item-detail'><Link to='/cart'>Ir al carrito <FontAwesomeIcon icon={faCartShopping}> </FontAwesomeIcon></Link></button> <button className='opciones-item-detail'><Link to='/'>Seguir comprando</Link></button> </>) : (<ItemCount inicial={1} stock= {stock}  funcionAgregar= {manejadorCantidad}/>)
             }
             
             </div>
