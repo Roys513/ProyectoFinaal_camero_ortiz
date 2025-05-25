@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState, useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { db } from '../../service/config'
@@ -14,7 +13,6 @@ const Checkout = () => {
     const [ordenId, setOrdenId] = useState("")
 
     const{carrito, vaciarCarrito, total, totalCantidad} = useContext(CartContext)
-    console.log()
 
     const manejadorFormulario = (e) => {
         e.preventDefault()

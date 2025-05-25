@@ -4,8 +4,6 @@ import { CartContext } from "../../context/CartContext"
 const CartItem = ({item,cantidad}) => {
 
 const {eliminarProducto} = useContext(CartContext)
-console.dir(item)
-console.log(cantidad)
 
 return (
     <div className="cart-item">

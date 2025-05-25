@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Item = ({id, nombreArtista, album, precio, img}) => {
