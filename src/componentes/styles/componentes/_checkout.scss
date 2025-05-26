@@ -3,7 +3,7 @@
 .checkout{
     background-color: presets.$color5;
     padding-top: clamp(1rem, 11vw, 4.3rem);
-    height: 150vh;
+    min-height: 100vh;
     
     h2{
         background-color: presets.$color6;
@@ -32,7 +32,22 @@
             font-size: clamp(1rem, 5vw, 1.5rem);
         }
     }
-
+    
+    .container-total{
+        @include presets.fuente_bebas_neue(500);
+        display: flex;
+        justify-content: end;
+        margin: 0 clamp(0.5rem, 5vw, 7rem);
+        .total{
+            align-content: center;
+        }
+        .total-cantidad{
+            align-content: end;
+            color: presets.$color2;
+            font-size: clamp(1rem, 5vw, 2rem);
+        }
+    }
+    
     .formulario-container{
         display: flex;
         justify-content: center;

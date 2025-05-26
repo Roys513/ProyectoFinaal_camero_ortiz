@@ -2,7 +2,7 @@
 
 .carrito-vacio{
     background-color: presets.$color5;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -28,7 +28,7 @@
 .cart{
     background-color: presets.$color5;
     padding-top: clamp(4rem, 13vw, 6rem);
-    height: 100vh;
+    min-height: 100vh;
     .total-productos{
         display: flex;
         justify-content: start;

@@ -35,6 +35,7 @@ const ItemDetail = ({id, nombreArtista, album, precio, img, stock}) => {
             <h4>{precio}€</h4>
             
             {
+              stock === 0 ? <p><span className='p-producto-no-disponible'>Producto no disponible</span> <span className='p-estamos-trabajando'>Estamos trabajando para volver a tenerlo pronto</span></p> :
               agregarCantidad > 0 ?(<> <button className='opciones-item-detail'><Link to='/cart'>Ir al carrito <FontAwesomeIcon icon={faCartShopping}> </FontAwesomeIcon></Link></button> <button className='opciones-item-detail'><Link to='/'>Seguir comprando</Link></button> </>) : (<ItemCount inicial={1} stock= {stock}  funcionAgregar= {manejadorCantidad}/>)
             }
             

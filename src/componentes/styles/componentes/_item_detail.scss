@@ -3,7 +3,7 @@
 
 .item_detail{
     background-color: presets.$color5;
-    height: 100vh;
+    min-height: 100vh;
     align-content: center;
     
     .item_detail_container{
@@ -51,6 +51,25 @@
             h3{
                 font-size: clamp(10px, 4vw, 20px);
                 margin-top: -20px;
+            }
+
+            h4{
+                font-size: clamp(1rem, 4vw, 2rem);
+            }
+
+            p{
+                @include presets.fuente_bebas_neue(500);
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                .p-producto-no-disponible{
+                    color: presets.$color2;
+                    font-size: clamp(1rem, 3vw, 2rem);
+                }
+                .p-estamos-trabajando{
+                    color: presets.$color7;
+                    font-size: clamp(0.5rem, 2vw, 1rem);
+                }
             }
 
             .opciones-item-detail{

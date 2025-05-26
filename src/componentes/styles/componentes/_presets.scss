@@ -48,8 +48,13 @@
             background-color: $color7;
             color: $color1;
         }
+}
+
+//Efecto hover elementos navbar
+@mixin pointer-navbar{
+    transition: all 0.20s ease;
         
-        &:active {
-            transform: scale(0.58);
+        &:hover{
+            color: $color2;
         }
 }

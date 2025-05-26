@@ -69,14 +69,18 @@ const Checkout = () => {
   return (
     <div className='checkout'>
         <h2>Checkout</h2>
+        {!ordenId &&(
         <form onSubmit={manejadorFormulario}>
-            {
+            {   
                 carrito.map(producto =>(
                     <div key={producto.item.id} className='item'>
                         <p className='producto-cantidad'>- {producto.item.nombreArtista} - {producto.item.album} x{producto.cantidad}</p>
-                        <p className='producto-precio'>{producto.item.precio}€</p>
+                        <p className='producto-precio'>{producto.item.precio*producto.cantidad}€</p>
                     </div>
                 ))
+            }
+            {
+                <p className='container-total'><span className='total'>Total: </span><span className='total-cantidad'>{parseFloat(total.toFixed(2))}€</span></p>
             }
             <div className="formulario-container">
                 <div className='formulario'>
@@ -108,10 +112,10 @@ const Checkout = () => {
             <div className="container-boton-submit">
                 <button type='submit'>Finalizar compra</button>
             </div>
-        </form>
+        </form>)}
         {ordenId && (
             <div className='respuesta-compra'>
-                <h4>¡Gracias por tu compra!</h4>
+                <h4>¡Gracias por tu compra <span>{nombre}</span>!</h4>
                 <p>Tu número de orden es: <strong>{ordenId}</strong></p>
             </div>
         )}

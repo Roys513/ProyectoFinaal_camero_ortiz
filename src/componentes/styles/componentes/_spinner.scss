@@ -1,0 +1,24 @@
+.spinner {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin: 5rem auto;
+  animation: girar 1s linear infinite;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+@keyframes girar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

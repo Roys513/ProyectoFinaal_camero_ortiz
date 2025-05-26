@@ -48,6 +48,7 @@ header{
                     font-size: clamp(1rem, 3vw, 1.5rem);
                     color:presets.$color5;
                     cursor: pointer;
+                    @include presets.pointer-navbar;
                 }
             }
         }

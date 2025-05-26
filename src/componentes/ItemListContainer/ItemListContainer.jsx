@@ -3,14 +3,16 @@ import ItemList from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
 import { db } from "../../service/config"
 import { collection, getDocs, query, where } from "firebase/firestore"
+import Spinner from "../spinner/spinner"
 
 const ItemListContainer = ()=>{
       const [productos, setProductos] = useState([])
-
+      const [cargando, setCargando] = useState(false);
 
       const {idCategoria} = useParams()
 
     useEffect(()=>{
+      setCargando(true)
       const misProductos = idCategoria ? query(collection(db,"productos"),where("idCat","==",idCategoria)) : collection(db,"productos");
 
       getDocs(misProductos)
@@ -22,13 +24,15 @@ const ItemListContainer = ()=>{
           setProductos(nuevosProductos)
         })
         .catch(error => console.log(error))
+        .finally(()=>{
+          console.log("Fin del proceso")
+          setCargando(false)
+        })
     }, [idCategoria])
     return (
       <>
         <div className="i_l_container">
-
-        <ItemList albumes={productos}/>
-        
+        {cargando ? <Spinner/> : <ItemList albumes={productos}/>}        
         </div>
       </>
   )
