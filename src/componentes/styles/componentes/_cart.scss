@@ -58,16 +58,17 @@
                 padding: clamp(0.5rem, 1vw, 0.6rem);
                 width: clamp(8rem, 20vw, 15rem);            
             }
+
             .terminar-compra{
                 @include presets.boton;
                 background-color: green;
-                padding: clamp(0.5rem, 1vw, 0.6rem);            
-                width: clamp(8rem, 20vw, 15rem);            
-                .link-checkout{
-                    text-decoration: none;
-                    color: inherit;
-                }
-            }
+                padding: clamp(0.5rem, 1vw, 0.6rem);
+                width: clamp(8rem, 20vw, 15rem);
+                display: inline-block;
+                text-align: center;
+                text-decoration: none;
+                color: presets.$color3;
+            }            
         }
     }
 }
