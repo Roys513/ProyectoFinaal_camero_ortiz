@@ -3,6 +3,7 @@
 .checkout{
     background-color: presets.$color5;
     padding-top: clamp(1rem, 11vw, 4.3rem);
+    padding-bottom: clamp(1rem, 5vw, 2rem);
     min-height: 100vh;
     
     h2{

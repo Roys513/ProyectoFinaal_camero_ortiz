@@ -1,0 +1,15 @@
+@use './presets';
+
+.footer{
+    background-color: presets.$color1;
+    height: clamp(2.5rem, 7vw, 5rem);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    p{
+        align-content: center;
+        @include presets.fuente_bebas_neue(300);
+        color: presets.$color5;
+        font-size: clamp(0.5rem, 3vw, 1rem);
+    }
+}

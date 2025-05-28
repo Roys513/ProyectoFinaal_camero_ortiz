@@ -1,11 +1,13 @@
 @use './presets';
 
 .carrito{
+    width: clamp(2.5rem, 4.5vw, 4rem);
     display: flex;
     height: clamp(2rem, 6vw, 3rem);
     .icon{
         align-self: center;
         height: 2rem;
+        width: clamp(1.5rem, 3vw, 3.5rem);
         cursor: pointer;
         color: white;
         @include presets.pointer-navbar;
@@ -16,7 +18,7 @@
         background-color: red;
         color: white;
         border-radius: 50%;
-        padding: 0.2rem 0.4rem;
-        font-size: 0.75rem;
+        padding: 0.1rem 0.3rem;
+        font-size: clamp(0.45rem, 0.8vw, 3rem);;
     }
 }

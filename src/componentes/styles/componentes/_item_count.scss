@@ -3,7 +3,10 @@
 .item_count.item_count {
     margin-top: auto;
     width: 100%;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
 
     .contador{
         display: flex;
@@ -35,6 +38,6 @@
         @include presets.boton;
         width: clamp(8rem, 10vw, 9rem);
         font-size: clamp(12px, 3vw,  16px);
-        align-content: center;
+        align-self: center;
     }
 }

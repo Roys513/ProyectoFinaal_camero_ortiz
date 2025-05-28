@@ -3,6 +3,7 @@
 
 .i_l_container{
     margin-top: clamp(1rem, 10vw, 4rem);
+    padding-bottom: clamp(1rem, 5vw, 2rem);
     background-color: presets.$color5;
     display: flex;
     justify-content: center;   
